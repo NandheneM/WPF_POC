@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Names"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Names" Height="250" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label>Names List</Label>
+        <ListBox Grid.Row="1" x:Name="lstNames"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <TextBox x:Name="txtName" Margin="0,0,0,10"/>
+            <Button x:Name="btnAdd" Margin="0,5,130,0" Click="ButtonAddName_Click">Add Name</Button>
+            <Button x:Name="btnClear" Margin="130,-20,0,0" Click="ButtonClear_Click">Clear List</Button>
+        </StackPanel>
+        <Label Grid.Column="1">Enter the name:</Label>
     </Grid>
 </Window>
